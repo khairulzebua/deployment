@@ -20,6 +20,7 @@ So, Here I go. I'm asked to create a deployment script to manage the blog deploy
 - Python Modules
 
   - dopy
+
   ```sudo pip install dopy```
 
 
@@ -34,3 +35,5 @@ So, Here I go. I'm asked to create a deployment script to manage the blog deploy
 # How to Deploy Docker Compose
 
 ```ansible-playbook -i inventory.ini blog.yml --tag deploy-compose --extra-vars="docker_compose=blog"```
+
+- I'm Ready...
