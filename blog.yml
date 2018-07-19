@@ -1,0 +1,16 @@
+---
+- name: WP Blog Setup 
+  hosts: blog
+  become: true
+  vars:
+    app_name: blog 
+    php_version: 7.2
+  vars_files:
+    - "group_vars/blog"
+  roles:
+    - ulimit
+    - timezone
+    - users
+    - nginx
+    - { role: php-fpm, tags: ["php-fpm"] }
+    #- wordpress
